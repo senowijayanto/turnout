@@ -8,6 +8,7 @@
     </div>
     <br>
     <p>{{error.message}}</p>
+    <br>
   </div>
 </template>
 
