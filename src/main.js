@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './components/App.vue'
 import VueRouter from 'vue-router'
 import { firebaseApp } from './firebaseApp'
+require('firebase/auth')
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,7 @@ const router = new VueRouter({
   ]
 })
 
-firebase.auth().onAuthStateChanged(user => {
+firebaseApp.auth().onAuthStateChanged(user => {
   if (user) {
     router.push('/dashboard')
   } else {
