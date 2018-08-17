@@ -18,3 +18,9 @@
   padding-left: 20%;
   padding-right: 20%;
 }
+
+.event-card {
+  border: 2px solid #2C3350;
+  margin-top: 10px;
+  border-radius: 4px;
+}
