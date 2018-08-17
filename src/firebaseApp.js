@@ -1,4 +1,5 @@
 import firebase from 'firebase/app'
+require('firebase/database')
 
 const config = {
   apiKey: "AIzaSyDzkhXUMWTBUKZrMBakTi7CyMgIb0TlFhQ",
@@ -10,3 +11,4 @@ const config = {
 };
 
 export const firebaseApp = firebase.initializeApp(config)
+export const eventsRef = firebaseApp.database().ref().child('events')
