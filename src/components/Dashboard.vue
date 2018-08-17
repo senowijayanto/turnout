@@ -5,7 +5,7 @@
     <hr>
     <AddEvent />
     <hr>
-    {{$store.state}}
+    {{$store.state.events}}
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
       snap.forEach(event => {
         events.push(event.val())
       })
-      console.log('events', events)
+      this.$store.dispatch('setEvents', events)
     })
   }
 }
